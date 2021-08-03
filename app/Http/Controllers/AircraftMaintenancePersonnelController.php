@@ -42,14 +42,20 @@ class AircraftMaintenancePersonnelController extends Controller
            
             'maintenance_id'  => 'required',
             'background'=> 'required',
-            'personnel'=> 'required', 
+            'nama'=> 'required', 
+            'ic'=> 'required',
+            'tarikh_lahir'=> 'required',
+            'alamat'=> 'required',
             
         ]);
 
         $aircraftmaintenancepersonnel = new AircraftMaintenancePersonnel;
         $aircraftmaintenancepersonnel ->maintenance_id= $request->maintenance_id;
         $aircraftmaintenancepersonnel ->background= $request->background;
-        $aircraftmaintenancepersonnel ->personnel= $request->personnel;
+        $aircraftmaintenancepersonnel ->nama= $request->nama;
+        $aircraftmaintenancepersonnel ->ic= $request->ic;
+        $aircraftmaintenancepersonnel ->tarikh_lahir= $request->tarikh_lahir;
+        $aircraftmaintenancepersonnel ->alamat= $request->alamat;
 
         $aircraftmaintenancepersonnel->save(); 
         return redirect('/aircraftmaintenancepersonnels');
@@ -90,7 +96,10 @@ class AircraftMaintenancePersonnelController extends Controller
     {
         $aircraftmaintenancepersonnel ->maintenance_id= $request->maintenance_id;
         $aircraftmaintenancepersonnel ->background= $request->background;
-        $aircraftmaintenancepersonnel ->personnel= $request->personnel;
+        $aircraftmaintenancepersonnel ->nama= $request->nama;
+        $aircraftmaintenancepersonnel ->ic= $request->ic;
+        $aircraftmaintenancepersonnel ->tarikh_lahir= $request->tarikh_lahir;
+        $aircraftmaintenancepersonnel ->alamat= $request->alamat;
 
         $aircraftmaintenancepersonnel->save();
     }

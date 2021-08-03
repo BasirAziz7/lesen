@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class AircraftMaintenancePersonnel extends Model
 {
     use HasFactory;
+
+    public function airnavigationservices() 
+    {
+        return $this->hasMany(AirNavigationServices::class);
+    }
 }

@@ -43,7 +43,15 @@ class FlightCrewLicensingController extends Controller
             'user_id'=> 'required',
             'condition_tree'=> 'required', 
             'invoicing_fee'=> 'required',
-            'assign'=> 'required',
+            'nama'=> 'required',
+            'lokasi'=> 'required',
+            'task_name'=> 'required',
+            'alamat'=> 'required',
+            'status_pilot'=> 'required',
+            'authority'=> 'required',
+            'status_authority'=> 'required',
+            'examiner'=> 'required',
+            'remarks'=> 'required',
             'rules_check'=> 'required',
             'verify_rule'=> 'required',
         ]);
@@ -52,7 +60,15 @@ class FlightCrewLicensingController extends Controller
         $flightcrewlicensing ->user_id= $request->user_id;
         $flightcrewlicensing ->condition_tree= $request->condition_tree;
         $flightcrewlicensing ->invoicing_fee= $request->invoicing_fee;
-        $flightcrewlicensing ->assign= $request->assign;
+        $flightcrewlicensing ->nama= $request->nama;
+        $flightcrewlicensing ->lokasi= $request->lokasi;
+        $flightcrewlicensing ->task_name= $request->task_name;
+        $flightcrewlicensing ->alamat= $request->alamat;
+        $flightcrewlicensing ->status_pilot= $request->status_pilot;
+        $flightcrewlicensing ->authority= $request->authority;
+        $flightcrewlicensing ->status_authority= $request->status_authority;
+        $flightcrewlicensing ->examiner= $request->examiner;
+        $flightcrewlicensing ->remarks= $request->remarks;
         $flightcrewlicensing ->rules_check= $request->rules_check;
         $flightcrewlicensing ->verify_rules= $request->verify_rules;
         
@@ -96,7 +112,15 @@ class FlightCrewLicensingController extends Controller
         $flightcrewlicensing ->user_id= $request->user_id;
         $flightcrewlicensing ->condition_tree= $request->condition_tree;
         $flightcrewlicensing ->invoicing_fee= $request->invoicing_fee;
-        $flightcrewlicensing ->assign= $request->assign;
+        $flightcrewlicensing ->nama= $request->nama;
+        $flightcrewlicensing ->lokasi= $request->lokasi;
+        $flightcrewlicensing ->task_name= $request->task_name;
+        $flightcrewlicensing ->alamat= $request->alamat;
+        $flightcrewlicensing ->status_pilot= $request->status_pilot;
+        $flightcrewlicensing ->authority= $request->authority;
+        $flightcrewlicensing ->status_authority= $request->status_authority;
+        $flightcrewlicensing ->examiner= $request->examiner;
+        $flightcrewlicensing ->remarks= $request->remarks;
         $flightcrewlicensing ->rules_check= $request->rules_check;
         $flightcrewlicensing ->verify_rules= $request->verify_rules;
         $flightcrewlicensing->save(); 

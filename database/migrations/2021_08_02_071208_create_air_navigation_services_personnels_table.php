@@ -16,7 +16,10 @@ class CreateAirNavigationServicesPersonnelsTable extends Migration
         Schema::create('air_navigation_services_personnels', function (Blueprint $table) {
             $table->id();
             $table->string('nav_services_id');
-            $table->string('background');
+            $table->string('rating');
+            $table->string('unit');
+            $table->string('checkpoint');
+            $table->string('unit_endorsement');
             $table->string('rules_check');
             $table->timestamps();
         });

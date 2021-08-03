@@ -18,8 +18,12 @@ class CreateMedicalExaminationsTable extends Migration
             $table->string('med_exam_id');
             $table->foreignid('user_id');
             $table->string('med_examiner_status');
-            $table->string('fitness_check');
-            $table->string('application_form');
+            $table->string('weight');
+            $table->string('bmi');
+            $table->string('heartbeat_rate');
+            $table->string('vendor_name');
+            $table->string('department');
+            $table->string('position');
             $table->timestamps();
         });
     }

@@ -43,8 +43,13 @@ class MedicalExaminationController extends Controller
             'med_exam_id'  => 'required',
             'user_id'=> 'required',
             'med_examiner_status'=> 'required', 
-            'fitness_check'=> 'required',
-            'application_form'=> 'required',
+            'heartbeat_rate'=> 'required',
+            'weight'=> 'required',
+            'bmi'=> 'required',
+            'vendor_name'=> 'required',
+            'department'=> 'required',
+            'position'=> 'required',
+            
             
         ]);
  
@@ -52,8 +57,12 @@ class MedicalExaminationController extends Controller
         $medicalexamination ->med_exam_id= $request->med_exam_id;
         $medicalexamination->user_id= $request->user_id;
         $medicalexamination ->med_examiner_status= $request->med_examiner_status;
-        $medicalexamination->lfitness_check= $request->fitness_check;
-        $medicalexamination ->application_form= $request->application_form;
+        $medicalexamination->heartbeat_rate= $request->heartbeat_rate;
+        $medicalexamination->weight= $request->weight;
+        $medicalexamination->bmi= $request->bmi;
+        $medicalexamination->vendor_name= $request->vendor_name;
+        $medicalexamination->department= $request->department;
+        $medicalexamination->position= $request->position;
        
         $medicalexamination->save(); 
         return redirect('/medicalexaminations');
@@ -95,8 +104,12 @@ class MedicalExaminationController extends Controller
         $medicalexamination ->med_exam_id= $request->med_exam_id;
         $medicalexamination->user_id= $request->user_id;
         $medicalexamination ->med_examiner_status= $request->med_examiner_status;
-        $medicalexamination->lfitness_check= $request->fitness_check;
-        $medicalexamination ->application_form= $request->application_form;
+        $medicalexamination->heartbeat_rate= $request->heartbeat_rate;
+        $medicalexamination->weight= $request->weight;
+        $medicalexamination->bmi= $request->bmi;
+        $medicalexamination->vendor_name= $request->vendor_name;
+        $medicalexamination->department= $request->department;
+        $medicalexamination->position= $request->position;
        
         $medicalexamination->save();
     }

@@ -17,7 +17,10 @@ class CreateAircraftMaintenancePersonnelsTable extends Migration
             $table->id();
             $table->string('maintenance_id');
             $table->string('background');
-            $table->foreignid('user_id');
+            $table->foreignid('nama');
+            $table->string('ic');
+            $table->string('tarikh_lahir');
+            $table->string('alamat');
             $table->timestamps();
         });
     }

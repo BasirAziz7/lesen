@@ -18,7 +18,15 @@ class CreateFlightCrewLicensingsTable extends Migration
             $table->foreignid('user_id');
             $table->string('condition_tree');
             $table->string('invoicing_fee');
-            $table->string('assign');
+            $table->string('nama');
+            $table->string('lokasi');
+            $table->string('task_name');
+            $table->string('alamat');
+            $table->string('status_pilot');
+            $table->string('authority');
+            $table->string('status_authority');
+            $table->string('examiner');
+            $table->string('remarks');
             $table->string('rules_checks');
             $table->string('verify_rule');
             $table->timestamps();

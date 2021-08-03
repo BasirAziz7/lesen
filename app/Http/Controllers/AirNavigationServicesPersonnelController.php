@@ -41,13 +41,19 @@ class AirNavigationServicesPersonnelController extends Controller
         $validated = $request->validate([
            
             'nav_service_id'  => 'required',
-            'background'=> 'required',
+            'rating'=> 'required',
+            'unit'=> 'required',
+            'checkpoint'=> 'required',
+            'unit_endorsement'=>'required',
             'rules_check'=> 'required', 
         ]); 
  
         $airnavigationservicespersonnel = new AirNavigationServicesPersonnel;
         $airnavigationservicespersonnel->nav_service_id= $request->nav_service_id;
-        $airnavigationservicespersonnel->background= $request->background;
+        $airnavigationservicespersonnel->rating= $request->rating;
+        $airnavigationservicespersonnel->unit= $request->unit;
+        $airnavigationservicespersonnel->checkpoint= $request->checkpoint;
+        $airnavigationservicespersonnel->unit_endorsement= $request->unit_endorsement;
         $airnavigationservicespersonnel->rules_check= $request->rules_check;
 
         $airnavigationservicespersonnel->save(); 
@@ -88,7 +94,10 @@ class AirNavigationServicesPersonnelController extends Controller
     public function update(Request $request, AirNavigationServicesPersonnel $airNavigationServicesPersonnel)
     {
         $airnavigationservicespersonnel ->nav_service_id= $request->nav_service_id;
-        $airnavigationservicespersonnel->background= $request->background;
+        $airnavigationservicespersonnel->rating= $request->rating;
+        $airnavigationservicespersonnel->unit= $request->unit;
+        $airnavigationservicespersonnel->checkpoint= $request->checkpoint;
+        $airnavigationservicespersonnel->unit_endorsement= $request->unit_endorsement;
         $airnavigationservicespersonnel->rules_check= $request->rules_check;
 
         $airnavigationservicespersonnel->save();
