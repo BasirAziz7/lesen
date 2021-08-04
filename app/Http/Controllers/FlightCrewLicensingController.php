@@ -14,7 +14,7 @@ class FlightCrewLicensingController extends Controller
      */
     public function index()
     {
-        $mflightcrewlicensings = FlightCrewLicensing::all();
+        $flightcrewlicensings = FlightCrewLicensing::all();
         return view('flightcrewlicensing.index',[
             'flightcrewlicensings'=> $flightcrewlicensings
         ]); 
@@ -40,8 +40,7 @@ class FlightCrewLicensingController extends Controller
     {
         $validated = $request->validate([
     
-            'user_id'=> 'required',
-            'condition_tree'=> 'required', 
+            'user_id'=> 'required', 
             'invoicing_fee'=> 'required',
             'nama'=> 'required',
             'lokasi'=> 'required',
@@ -54,11 +53,12 @@ class FlightCrewLicensingController extends Controller
             'remarks'=> 'required',
             'rules_check'=> 'required',
             'verify_rule'=> 'required',
+            'flight_experience'=> 'required',
+            
         ]);
  
         $flightcrewlicensing = new FlightCrewLicensing;
         $flightcrewlicensing ->user_id= $request->user_id;
-        $flightcrewlicensing ->condition_tree= $request->condition_tree;
         $flightcrewlicensing ->invoicing_fee= $request->invoicing_fee;
         $flightcrewlicensing ->nama= $request->nama;
         $flightcrewlicensing ->lokasi= $request->lokasi;
@@ -71,7 +71,7 @@ class FlightCrewLicensingController extends Controller
         $flightcrewlicensing ->remarks= $request->remarks;
         $flightcrewlicensing ->rules_check= $request->rules_check;
         $flightcrewlicensing ->verify_rules= $request->verify_rules;
-        
+        $flightcrewlicensing ->flight_experience= $request->flight_experience;
         $flightcrewlicensing->save(); 
         return redirect('/flightcrewlicensings');
     }
@@ -110,7 +110,6 @@ class FlightCrewLicensingController extends Controller
     public function update(Request $request, FlightCrewLicensing $flightCrewLicensing)
     {
         $flightcrewlicensing ->user_id= $request->user_id;
-        $flightcrewlicensing ->condition_tree= $request->condition_tree;
         $flightcrewlicensing ->invoicing_fee= $request->invoicing_fee;
         $flightcrewlicensing ->nama= $request->nama;
         $flightcrewlicensing ->lokasi= $request->lokasi;
@@ -123,6 +122,7 @@ class FlightCrewLicensingController extends Controller
         $flightcrewlicensing ->remarks= $request->remarks;
         $flightcrewlicensing ->rules_check= $request->rules_check;
         $flightcrewlicensing ->verify_rules= $request->verify_rules;
+        $flightcrewlicensing ->flight_experience= $request->flight_experience;
         $flightcrewlicensing->save(); 
     }
 

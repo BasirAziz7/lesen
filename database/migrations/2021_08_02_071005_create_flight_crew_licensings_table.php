@@ -16,7 +16,6 @@ class CreateFlightCrewLicensingsTable extends Migration
         Schema::create('flight_crew_licensings', function (Blueprint $table) {
             $table->id();
             $table->foreignid('user_id');
-            $table->string('condition_tree');
             $table->string('invoicing_fee');
             $table->string('nama');
             $table->string('lokasi');
@@ -29,6 +28,7 @@ class CreateFlightCrewLicensingsTable extends Migration
             $table->string('remarks');
             $table->string('rules_checks');
             $table->string('verify_rule');
+            $table->string('flight_experience');
             $table->timestamps();
         });
     }
