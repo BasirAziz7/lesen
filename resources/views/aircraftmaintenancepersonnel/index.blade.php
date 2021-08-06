@@ -1,6 +1,11 @@
+@extends('base')
+
+@section('content')
 
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
 </head>
 
 <div class="container py-5">
@@ -16,13 +21,14 @@
                         <label for="">Maintenance ID :</label>
                         <input class="form-control mb-3" type="text" name="maintenance_id">
                         <div class="form-group">
-                        <label name="background">Background: </label>
-                        <select class="form-control"  name="background">
-                        <option value="manufacturer">manufacturer</option>
-                        <option value="aircraft type">flight school</option>
-                        <option value="limitation">examiner</option>
-                      </select>
-                    </div>
+                            <label name="background">Background: </label>
+                            <select class="form-control" name="background">
+                                <option hidden selected> Sila Pilih </option>
+                                <option value="manufacturer">manufacturer</option>
+                                <option value="aircraft type">flight school</option>
+                                <option value="limitation">examiner</option>
+                            </select>
+                        </div>
                         <label for="">Name :</label>
                         <input class="form-control mb-3" type="text" name="nama">
                         <label for="">NRIC :</label>
@@ -32,7 +38,7 @@
                         <label for="">Address :</label>
                         <input class="form-control mb-3" type="text" name="alamat">
 
-</br>
+                        </br>
 
                     </div>
                     <input type="hidden" name="aircraftmaintenancepersonnel" value=1>
@@ -43,8 +49,8 @@
                     <div class="col-12">
                         <h3>Aircraft Maintenance Personnel</h3>
                         <table class="table table-bordered">
-                               
-                              <tr>Maintenance ID</th>
+
+                            <tr>Maintenance ID</th>
                                 <th>Background:</th>
                                 <th>Name</th>
                                 <th>Lokasi </th>
@@ -60,13 +66,17 @@
                                 <td>{{ $aircraftmaintenancepersonnel['ic'] }}</td>
                                 <td>{{ $aircraftmaintenancepersonnel['tarikh_lahir'] }}</td>
                                 <td>{{ $aircraftmaintenancepersonnel['alamat'] }}</td>
-                                
+
 
                             </tr>
                             @endforeach
                         </table>
                     </div>
                 </div>
-          </div>
-        
-          
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@stop

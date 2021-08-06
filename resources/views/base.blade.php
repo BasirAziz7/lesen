@@ -9,6 +9,22 @@
 <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
 <meta content="Coderthemes" name="author">
 
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+#chartdiv1 {
+  width: 100%;
+  height: 500px;
+}
+#chartdiv2{
+  width: 100%;
+  height: 500px;
+}
+
+</style>
 
 
 
@@ -16,7 +32,7 @@
 
 
 
-        <title>Dashboard | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Lesen Terbang</title>
     <link rel="icon" href="favicon.ico"><link href="css/dashboardEcommerce.css" rel="stylesheet"><link href="css/app.css" rel="stylesheet"></head>
 
     <body class="loading" data-layout="topnav" data-layout-config='{"layoutBoxed":false,"darkMode":false,"showRightSidebarOnStart": true}'>
@@ -37,10 +53,10 @@
         
         <a href="index.html" class="topnav-logo">
             <span class="topnav-logo-lg">
-                <img src="../images/logo-light.png" alt="" height="16">
+                <img src="https://upload.wikimedia.org/wikipedia/ms/0/06/MOT_Logo.png" alt="" height="16">
             </span>
             <span class="topnav-logo-sm">
-                <img src="../images/logo_sm_dark.png" alt="" height="16">
+                <img src="https://upload.wikimedia.org/wikipedia/ms/0/06/MOT_Logo.png" alt="" height="16">
             </span>
         </a>
 
@@ -228,21 +244,14 @@
 
                 </div>
             </li>
-
-            <li class="notification-list">
-                <a class="nav-link">
-                    <i class="dripicons-gear noti-icon" data-bs-toggle="offcanvas" href="#endbar-offcanvas" role="button" aria-controls="endbar-offcanvas"></i>
-                </a>
-            </li>
-
             <li class="dropdown notification-list">
                 <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" id="topbar-userdrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <span class="account-user-avatar">
                         <img src="../images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                     </span>
                     <span>
-                        <span class="account-user-name">Dominic Keller</span>
-                        <span class="account-position">Founder</span>
+                        <span class="account-user-name"></span>
+                        <span class="account-position"></span>
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown" aria-labelledby="topbar-userdrop">
@@ -367,9 +376,9 @@
 
             <div class="collapse navbar-collapse" id="topnav-menu-content">
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboards" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="uil-dashboard me-1"></i>Dashboards <div class="arrow-down"></div>
+                    <li >
+                        <a class="nav-link dropdown-toggle arrow-none" href="dashboard" id="topnav-dashboards" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-dashboard me-1"></i>DASHBOARD
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-dashboards">
                             <a href="dashboard-analytics.html" class="dropdown-item">Analytics</a>
@@ -378,9 +387,9 @@
                             <a href="dashboard-projects.html" class="dropdown-item">Projects</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="uil-apps me-1"></i>Apps <div class="arrow-down"></div>
+                    <li >
+                        <a class="nav-link dropdown-toggle arrow-none" href="aircraftmaintenancepersonnels" id="topnav-apps" role="button"  aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-apps me-1"></i>AMP 
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-apps">
                             <a href="apps-calendar.html" class="dropdown-item">Calendar</a>
@@ -434,9 +443,9 @@
                             <a href="apps-file-manager.html" class="dropdown-item">File Manager</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="uil-copy-alt me-1"></i>Pages <div class="arrow-down"></div>
+                    <li >
+                        <a class="nav-link dropdown-toggle arrow-none" href="airnavigationservicespersonnels" id="topnav-pages" role="button"  aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-copy-alt me-1"></i>ANSP
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-pages">
                             <div class="dropdown">
@@ -480,9 +489,9 @@
                             <a href="landing.html" class="dropdown-item">Landing</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="uil-package me-1"></i>Components <div class="arrow-down"></div>
+                    <li >
+                        <a class="nav-link dropdown-toggle arrow-none" href="flightcrewlicensings" id="topnav-components" role="button"  aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-package me-1"></i>FCL 
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-components">
                             <a href="widgets.html" class="dropdown-item">Widgets</a>
@@ -606,9 +615,9 @@
                         </div>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layouts" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="uil-window me-1"></i>Layouts <div class="arrow-down"></div>
+                    <li >
+                        <a class="nav-link dropdown-toggle arrow-none" href="/medicalexaminations" id="topnav-layouts" role="button"  aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-window me-1"></i>ME 
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-layouts">
                             <a href="layouts-vertical.html" class="dropdown-item">Vertical</a>
@@ -642,12 +651,13 @@
                                             </a>
                                         </form>
                                     </div>
-                                    <h4 class="page-title">Dashboard</h4>
+                                    @yield('content')
                                 </div>
-                            </div>
+                            </div> 
                         </div>
+                       
                         
-
+<!-- 
                         <div class="row">
                             <div class="col-xl-5 col-lg-6">
 
@@ -749,10 +759,10 @@
                                 </div> 
 
                             </div> 
-                        </div>
+                        </div> -->
                         
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-lg-8">
                                 <div class="card">
                                     <div class="card-body">
@@ -864,11 +874,11 @@
                                     </div> 
                                 </div> 
                             </div> 
-                        </div>
+                        </div> -->
                         
 
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-xl-6 col-lg-12 order-lg-2 order-xl-1">
                                 <div class="card">
                                     <div class="card-body">
@@ -1141,28 +1151,23 @@
                             </div>
                             
 
-                        </div>
+                        </div> -->
                         
 
                     </div>
-                    
-
                 </div>
-                
-
-                
-                
+                   
 <footer class="footer">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <script>document.write(new Date().getFullYear())</script> © Hyper - Coderthemes.com
+                <script>document.write(new Date().getFullYear())</script> © Pipeline Network - https://pipeline.com.my/
             </div>
             <div class="col-md-6">
                 <div class="text-md-end footer-links d-none d-md-block">
-                    <a href="javascript: void(0);">About</a>
-                    <a href="javascript: void(0);">Support</a>
-                    <a href="javascript: void(0);">Contact Us</a>
+                    <a href="https://pipeline.com.my/">About</a>
+                    <a href="https://pipeline.com.my/">Support</a>
+                    <a href="https://pipeline.com.my/">Contact Us</a>
                 </div>
             </div>
         </div>
