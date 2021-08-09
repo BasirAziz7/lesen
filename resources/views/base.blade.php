@@ -4,6 +4,7 @@
 
     <head>
         
+    
         <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
@@ -21,6 +22,14 @@
 }
 #chartdiv2{
   width: 100%;
+  height: 500px;
+}
+#chartdiv4{
+  width: 120%;
+  height: 500px;
+}
+#chartdiv5{
+  width: 120%;
   height: 500px;
 }
 

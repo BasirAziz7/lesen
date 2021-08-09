@@ -3,14 +3,12 @@
 @section('content')
 
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-<div class="container py-5">
+<div class="container py-5 d-flex justify-content-center">
     <div class="row">
-        <div class="col-6 bg-light">
+        <div class="col-12 bg-light">
             <h3>Flight Crew Licensings</h3>
 
             <div class="col-6">
@@ -99,53 +97,55 @@
 
                 <div class="row my-4">
                     <div class="col-12">
-                        <h3>Flight Crew Licensings</h3>
-                        <table class="table table-bordered">
 
-                            <th>User Id</th>
-                            <th>Invoicing Fee</th>
-                            <th>Name</th>
-                            <th>Lokasi </th>
-                            <th>Task Name </th>
-                            <th>status pilot</th>
-                            <th>Address </th>
-                            <th>Authority</th>
-                            <th>Authority Status</th>
-                            <th>Examiner</th>
-                            <th>Remarks</th>
-                            <th>Rules Check</th>
-                            <th>Verify Rules</th>
-                            <th>Flight Experience</th>
-
-                            </tr>
-                            @foreach ($flightcrewlicensings as $flightcrewlicensing)
-                            <tr>
-                                <td>{{ $flightcrewlicensing['user_id'] }}</td>
-                                <td>{{ $flightcrewlicensing['invoicing_fee'] }}</td>
-                                <td>{{ $flightcrewlicensing['nama'] }}</td>
-                                <td>{{ $flightcrewlicensing['lokasi'] }}</td>
-                                <td>{{ $flightcrewlicensing['task_name'] }}</td>
-                                <td>{{ $flightcrewlicensing['status_pilot'] }}</td>
-                                <td>{{ $flightcrewlicensing['alamat'] }}</td>
-                                <td>{{ $flightcrewlicensing['authority'] }}</td>
-                                <td>{{ $flightcrewlicensing['status_authority'] }}</td>
-                                <td>{{ $flightcrewlicensing['examiner'] }}</td>
-                                <td>{{ $flightcrewlicensing['remarks'] }}</td>
-                                <td>{{ $flightcrewlicensing['rules_check'] }}</td>
-                                <td>{{ $flightcrewlicensing['verify_rule'] }}</td>
-                                <td>{{ $flightcrewlicensing['flight_experience'] }}</td>
-
-
-                            </tr>
-                            @endforeach
-                        </table>
                     </div>
                 </div>
             </div>
+            
         </div>
-        <div class="chart col-6">
-            <div id="chartdiv"></div>
+        <div class="chart col-12 d-flex justify-content-center">
+            <div id="chartdiv5"></div>
         </div>
+        <h3>Flight Crew Licensings</h3>
+            <table class="table table-bordered">
+
+                <th>User Id</th>
+                <th>Invoicing Fee</th>
+                <th>Name</th>
+                <th>Lokasi </th>
+                <th>Task Name </th>
+                <th>status pilot</th>
+                <th>Address </th>
+                <th>Authority</th>
+                <th>Authority Status</th>
+                <th>Examiner</th>
+                <th>Remarks</th>
+                <th>Rules Check</th>
+                <th>Verify Rules</th>
+                <th>Flight Experience</th>
+
+                </tr>
+                @foreach ($flightcrewlicensings as $flightcrewlicensing)
+                <tr>
+                    <td>{{ $flightcrewlicensing['user_id'] }}</td>
+                    <td>{{ $flightcrewlicensing['invoicing_fee'] }}</td>
+                    <td>{{ $flightcrewlicensing['nama'] }}</td>
+                    <td>{{ $flightcrewlicensing['lokasi'] }}</td>
+                    <td>{{ $flightcrewlicensing['task_name'] }}</td>
+                    <td>{{ $flightcrewlicensing['status_pilot'] }}</td>
+                    <td>{{ $flightcrewlicensing['alamat'] }}</td>
+                    <td>{{ $flightcrewlicensing['authority'] }}</td>
+                    <td>{{ $flightcrewlicensing['status_authority'] }}</td>
+                    <td>{{ $flightcrewlicensing['examiner'] }}</td>
+                    <td>{{ $flightcrewlicensing['remarks'] }}</td>
+                    <td>{{ $flightcrewlicensing['rules_check'] }}</td>
+                    <td>{{ $flightcrewlicensing['verify_rule'] }}</td>
+                    <td>{{ $flightcrewlicensing['flight_experience'] }}</td>
+
+
+                </tr>
+                @endforeach
+            </table>
     </div>
 </div>
 
@@ -157,98 +157,83 @@
 
 <!-- Chart code -->
 <script>
-am4core.ready(function() {
+    am4core.ready(function() {
 
-    // Themes begin
-    am4core.useTheme(am4themes_animated);
-    // Themes end
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
 
-    // Create chart instance
-    var chart = am4core.create("chartdiv", am4charts.XYChart3D);
-    chart.paddingBottom = 30;
-    chart.angle = 35;
+        // Create chart instance
+        var chart = am4core.create("chartdiv5", am4charts.XYChart3D);
+        chart.paddingBottom = 30;
+        chart.angle = 35;
 
-    // Add data
-    chart.data = [{
-        "country": "USA",
-        "visits": 4025
-    }, {
-        "country": "China",
-        "visits": 1882
-    }, {
-        "country": "Japan",
-        "visits": 1809
-    }, {
-        "country": "Germany",
-        "visits": 1322
-    }, {
-        "country": "UK",
-        "visits": 1122
-    }, {
-        "country": "France",
-        "visits": 1114
-    }, {
-        "country": "India",
-        "visits": 984
-    }, {
-        "country": "Spain",
-        "visits": 711
-    }, {
-        "country": "Netherlands",
-        "visits": 665
-    }, {
-        "country": "Russia",
-        "visits": 580
-    }, {
-        "country": "South Korea",
-        "visits": 443
-    }, {
-        "country": "Canada",
-        "visits": 441
-    }, {
-        "country": "Brazil",
-        "visits": 395
-    }, {
-        "country": "Italy",
-        "visits": 386
-    }, {
-        "country": "Taiwan",
-        "visits": 338
-    }];
+        // Add data
+        chart.data = [{
+            "country": "1",
+            "visits": 4025
+        }, {
+            "country": "2",
+            "visits": 1882
+        }, {
+            "country": "3",
+            "visits": 1809
+        }, {
+            "country": "4",
+            "visits": 1322
+        }, {
+            "country": "5",
+            "visits": 1122
+        }, {
+            "country": "6",
+            "visits": 1114
+        }, {
+            "country": "7",
+            "visits": 984
+        }, {
+            "country": "8",
+            "visits": 711
+        }, {
+            "country": "9",
+            "visits": 665
+        }, {
+            "country": "10",
+            "visits": 580
+        }];
 
-    // Create axes
-    var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-    categoryAxis.dataFields.category = "country";
-    categoryAxis.renderer.grid.template.location = 0;
-    categoryAxis.renderer.minGridDistance = 20;
-    categoryAxis.renderer.inside = true;
-    categoryAxis.renderer.grid.template.disabled = true;
+        // Create axes
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "country";
+        categoryAxis.renderer.grid.template.location = 0;
+        categoryAxis.renderer.minGridDistance = 20;
+        categoryAxis.renderer.inside = true;
+        categoryAxis.renderer.grid.template.disabled = true;
 
-    let labelTemplate = categoryAxis.renderer.labels.template;
-    labelTemplate.rotation = -90;
-    labelTemplate.horizontalCenter = "left";
-    labelTemplate.verticalCenter = "middle";
-    labelTemplate.dy = 10; // moves it a bit down;
-    labelTemplate.inside = false; // this is done to avoid settings which are not suitable when label is rotated
+        let labelTemplate = categoryAxis.renderer.labels.template;
+        labelTemplate.rotation = -90;
+        labelTemplate.horizontalCenter = "left";
+        labelTemplate.verticalCenter = "middle";
+        labelTemplate.dy = 10; // moves it a bit down;
+        labelTemplate.inside = false; // this is done to avoid settings which are not suitable when label is rotated
 
-    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-    valueAxis.renderer.grid.template.disabled = true;
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.renderer.grid.template.disabled = true;
 
-    // Create series
-    var series = chart.series.push(new am4charts.ConeSeries());
-    series.dataFields.valueY = "visits";
-    series.dataFields.categoryX = "country";
+        // Create series
+        var series = chart.series.push(new am4charts.ConeSeries());
+        series.dataFields.valueY = "visits";
+        series.dataFields.categoryX = "country";
 
-    var columnTemplate = series.columns.template;
-    columnTemplate.adapter.add("fill", function(fill, target) {
-        return chart.colors.getIndex(target.dataItem.index);
-    })
+        var columnTemplate = series.columns.template;
+        columnTemplate.adapter.add("fill", function(fill, target) {
+            return chart.colors.getIndex(target.dataItem.index);
+        })
 
-    columnTemplate.adapter.add("stroke", function(stroke, target) {
-        return chart.colors.getIndex(target.dataItem.index);
-    })
+        columnTemplate.adapter.add("stroke", function(stroke, target) {
+            return chart.colors.getIndex(target.dataItem.index);
+        })
 
-}); // end am4core.ready()
+    }); // end am4core.ready()
 </script>
 
 @stop

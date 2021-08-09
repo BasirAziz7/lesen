@@ -45,38 +45,39 @@
                     <button class="btn btn-primary" type="submit">Tambah</button>
                 </form>
 
-                <div class="row my-4">
-                    <div class="col-12">
-                        <h3>Aircraft Maintenance Personnel</h3>
-                        <table class="table table-bordered">
-
-                            <tr>Maintenance ID</th>
-                                <th>Background:</th>
-                                <th>Name</th>
-                                <th>Lokasi </th>
-                                <th>NRIC </th>
-                                <th>Tarikh Lahir</th>
-                                <th>Address </th>
-                            </tr>
-                            @foreach ($aircraftmaintenancepersonnels as $aircraftmaintenancepersonnel)
-                            <tr>
-                                <td>{{ $aircraftmaintenancepersonnel['maintenance_id'] }}</td>
-                                <td>{{ $aircraftmaintenancepersonnel['background'] }}</td>
-                                <td>{{ $aircraftmaintenancepersonnel['nama'] }}</td>
-                                <td>{{ $aircraftmaintenancepersonnel['ic'] }}</td>
-                                <td>{{ $aircraftmaintenancepersonnel['tarikh_lahir'] }}</td>
-                                <td>{{ $aircraftmaintenancepersonnel['alamat'] }}</td>
-
-
-                            </tr>
-                            @endforeach
-                        </table>
-                    </div>
-                </div>
             </div>
+        </div>
+        
+        <div class="col-6">
+        </br>
+            <h3>Aircraft Maintenance Personnel</h3>
+            <table class="table table-bordered">
 
+                <th>Maintenance ID</th>
+                <th>Background:</th>
+                <th>Name</th>
+                <th>Lokasi </th>
+                <th>NRIC </th>
+                <th>Tarikh Lahir</th>
+                <th>Address </th>
+                </tr>
+                @foreach ($aircraftmaintenancepersonnels as $aircraftmaintenancepersonnel)
+                <tr>
+                    <td>{{ $aircraftmaintenancepersonnel['maintenance_id'] }}</td>
+                    <td>{{ $aircraftmaintenancepersonnel['background'] }}</td>
+                    <td>{{ $aircraftmaintenancepersonnel['nama'] }}</td>
+                    <td>{{ $aircraftmaintenancepersonnel['ic'] }}</td>
+                    <td>{{ $aircraftmaintenancepersonnel['tarikh_lahir'] }}</td>
+                    <td>{{ $aircraftmaintenancepersonnel['alamat'] }}</td>
+
+
+                </tr>
+                @endforeach
+            </table>
         </div>
     </div>
+
 </div>
+
 
 @stop

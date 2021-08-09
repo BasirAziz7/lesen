@@ -13,7 +13,7 @@
     <div class="row">
         
         <div class="col-6 bg-light">
-            <h3>air navigation services personnel</h3>
+            <h3>Air Navigation Services Personnel</h3>
 
             <div class="col-6">
 
@@ -72,10 +72,10 @@
 
                 <div class="row my-4">
                     <div class="col-12">
-                        <h3>air navigation services personnel</h3>
+                        <h3>Air Navigation Services Personnel</h3>
                         <table class="table table-bordered">
 
-                            <tr>Navigation Service ID</th>
+                            <th>Navigation Service ID</th>
                                 <th>Rules Check</th>
                                 <th>rating</th>
                                 <th>Unit</th>
@@ -101,7 +101,7 @@
         </div>
 </br>
         <div class="chart col-6">
-            <div id="chartdiv"></div>
+            <div id="chartdiv4"></div>
         </div>
     </div>
 </div>
@@ -120,48 +120,21 @@ am4core.ready(function() {
 am4core.useTheme(am4themes_animated);
 // Themes end
 
-var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+var chart = am4core.create("chartdiv4", am4charts.PieChart3D);
 chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
 chart.legend = new am4charts.Legend();
 
 chart.data = [
   {
-    country: "Lithuania",
+    country: "Good ",
     litres: 501.9
   },
   {
-    country: "Czech Republic",
+    country: "Bad",
     litres: 301.9
   },
-  {
-    country: "Ireland",
-    litres: 201.1
-  },
-  {
-    country: "Germany",
-    litres: 165.8
-  },
-  {
-    country: "Australia",
-    litres: 139.9
-  },
-  {
-    country: "Austria",
-    litres: 128.3
-  },
-  {
-    country: "UK",
-    litres: 99
-  },
-  {
-    country: "Belgium",
-    litres: 60
-  },
-  {
-    country: "Netherlands",
-    litres: 50
-  }
+  
 ];
 
 var series = chart.series.push(new am4charts.PieSeries3D());

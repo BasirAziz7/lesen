@@ -10,7 +10,9 @@
 
 <div class="container py-5">
     <div class="row">
+
         <div class="col-6 bg-light">
+
             <h3>MEDICAL EXAMINTAION</h3>
 
             <div class="col-6">
@@ -56,42 +58,41 @@
                     <input type="hidden" name="medicalexam" value=1>
                     <button class="btn btn-primary" type="submit">Tambah</button>
                 </form>
-
-                <div class="row my-4">
-                    <div class="col-12">
-                        <h3>Medical Exam</h3>
-                        <table class="table table-bordered">
-                            <tr>
-                                <th>Exam ID</th>
-                                <th>User ID</th>
-                                <th>Examiner Status</th>
-                                <th>heartbeat rate</th>
-                                <th>Weight </th>
-                                <th>BMI</th>
-                                <th>vendor name </th>
-                                <th>department </th>
-                                <th>position </th>
-
-
-                            </tr>
-                            @foreach ($medicalexaminations as $medicalexamination)
-                            <tr>
-                                <td>{{ $medicalexminations['med_exam_id'] }}</td>
-                                <td>{{ $medicalexminations['user_id'] }}</td>
-                                <td>{{ $medicalexminations['med_examiner_status'] }}</td>
-                                <td>{{ $medicalexminations['heartbeat_rate'] }}</td>
-                                <td>{{ $medicalexminations['weight'] }}</td>
-                                <td>{{ $medicalexminations['bmi'] }}</td>
-                                <td>{{ $medicalexminations['vendor_name'] }}</td>
-                                <td>{{ $medicalexminations['department'] }}</td>
-                                <td>{{ $medicalexminations['position'] }}</td>
-                            </tr>
-                            @endforeach
-                        </table>
-                    </div>
-                </div>
             </div>
+
+        </div>
+        <div class=" col-6">
+        <h3>Medical Exam</h3>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Exam ID</th>
+                    <th>User ID</th>
+                    <th>Examiner Status</th>
+                    <th>heartbeat rate</th>
+                    <th>Weight </th>
+                    <th>BMI</th>
+                    <th>vendor name </th>
+                    <th>department </th>
+                    <th>position </th>
+
+
+                </tr>
+                @foreach ($medicalexaminations as $medicalexamination)
+                <tr>
+                    <td>{{ $medicalexminations['med_exam_id'] }}</td>
+                    <td>{{ $medicalexminations['user_id'] }}</td>
+                    <td>{{ $medicalexminations['med_examiner_status'] }}</td>
+                    <td>{{ $medicalexminations['heartbeat_rate'] }}</td>
+                    <td>{{ $medicalexminations['weight'] }}</td>
+                    <td>{{ $medicalexminations['bmi'] }}</td>
+                    <td>{{ $medicalexminations['vendor_name'] }}</td>
+                    <td>{{ $medicalexminations['department'] }}</td>
+                    <td>{{ $medicalexminations['position'] }}</td>
+                </tr>
+                @endforeach
+            </table>
         </div>
     </div>
 </div>
+
 @stop
